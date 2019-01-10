@@ -4,7 +4,19 @@
 @import url(../css/slick.css);
 @import url(../css/slick-theme.css);
 @import url(../css/framework.css);
-@import url(../fonts/GillSansDisplayMTPro-ExBd.otf);
+
+@font-face {
+	font-family: Gill-Normal;
+	src: url("../fonts/GillSansMTPro-Book.otf");
+	font-weight: normal;
+}
+@font-face {
+    font-family: Gill;
+	src: url("../fonts/GillSansDisplayMTPro-ExBd.otf");
+};
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+
 /* Blocks layout */
 body {
   font-family: Roboto;
@@ -705,13 +717,13 @@ b, strong {
 
 /* Content 5 */
 .content_5 {
-  background: #141617 url(../i/content_5_bg.jpg) no-repeat 50% 50%;
+  background: #141617 url(../i/prototipar.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (-o-min-device-pixel-ratio: 5/4), (min-resolution: 120dpi) {
   .content_5 {
-    background-image: url(../i/content_5_bg_2x.jpg);
+    background-image: url(../i/prototipar.jpg);
   }
 }
 
