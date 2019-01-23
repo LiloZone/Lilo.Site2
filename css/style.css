@@ -11,8 +11,9 @@
 	font-weight: normal;
 }
 @font-face {
-    font-family: Gill;
-	src: url("../fonts/GillSansDisplayMTPro-ExBd.otf");
+  font-family: Gill;
+  src: url("../fonts/GillSansDisplayMTPro-ExBd.otf");
+  font-weight: bolder;
 };
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
@@ -2624,6 +2625,27 @@ b, strong {
 
 .modal-content {
   overflow: auto
+}
+
+.top_text {
+  color: red; 
+  font-weight: bolder; 
+  font-size: 56.5px; 
+  line-height: 50px; 
+  position: absolute; 
+  top: 50.7%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.bottom_text {
+  white-space: nowrap;
+  font-weight: bolder;
+  color: red; 
+  position: absolute; 
+  top: 67%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 /* Showcase 4 */
