@@ -2628,9 +2628,7 @@ b, strong {
 }
 
 .top_text {
-  color: red; 
   font-weight: bolder; 
-  font-size: 56.5px; 
   line-height: 50px; 
   position: absolute; 
   top: 50.7%; 
@@ -2641,7 +2639,6 @@ b, strong {
 .bottom_text {
   white-space: nowrap;
   font-weight: bolder;
-  color: red; 
   position: absolute; 
   top: 67%; 
   left: 50%; 
@@ -7425,3 +7422,4 @@ b, strong {
     line-height: 32px;
   }
 }
+    
