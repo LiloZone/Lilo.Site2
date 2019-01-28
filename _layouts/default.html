@@ -81,7 +81,7 @@
         <br>
 		<h2 class="font20 light font_first dark_gray uppercase">{{page.sobreCabecalho}}</h2>
 		<div class="margin_auto top15 bottom85 max_width770 font14 light hyphens text">
-            <p class="font14 font_second">{{page.sobreConteudo}}  <strong>{{page.SobreFraseFinal}} </strong></p>
+            <p class="font14 font_second">{{page.sobreConteudo}}  <strong>{{page.sobreFraseFinal}} </strong></p>
 		</div>
     </div>
     <div class="container">
@@ -95,7 +95,7 @@
 						SPACE
 					</span>
 					<span class="font_second font14 bottom_text text_center uppercase white">
-						um espaço para fazer quase tudo
+						{{page.textoMakerspace}}
 					</span>
 				</div>
 			</div>
@@ -107,7 +107,7 @@
 						Lab
 				</span>
                 <span class="font_second font14 bottom_text text_center uppercase white">
-						um laboratório de circuito vestíveis
+                        {{page.textoWearableslab}}
 				</span>
 			</a>
 				<a class="col-xs-4" data-toggle="modal" data-target="#lasercutter">
@@ -118,7 +118,7 @@
 						Cutter
 				</span>
                 <span class="font_second font14 bottom_text text_center uppercase white">
-						prototipagem em formatos maiores
+                        {{page.textoLasercutter}}
 				</span>
 			</a>
 		</div>
@@ -134,9 +134,9 @@
           </div>
           <div class="modal-body padding_left30 padding_right30">
               <img src="../i/VB_MakerSpace_11.jpg" class="bottom35 width_full" alt="" />
-              <p class="font_second font18"><strong>Área</strong></p>
-              <p class="font_second font14">3,85 x 5,60 m (com possível extensão à área da eletrônica de 3,40 x 3,40 m).</p>
-              <p class="font_second font18"><strong>Equipamentos</strong></p>
+              <p class="font_second font18"><strong>{{page.makerspaceAreaTitulo}}</strong></p>
+              <p class="font_second font14">{{page.makerspaceAreaConteudo}}</p>
+              <p class="font_second font18"><strong>{{page.makerspaceEquipamentosTitulo}}</strong></p>
                   <li class="font_second font14">Impressora 3D delta com extrusor cambiável (1.75 mm), sistema de filamento aberto (PLA ou ABS) com área de trabalho cilíndrica aproximadamente 20x20x20cm.</li>
                   <li class="font_second font14">Impressa 3D matricial Geeetech pro W Prusa I3 com sistema de filamento aberto e área de trabalho 20x20x18cm.</li>
                   <li class="font_second font14">Fresadora CNC com área de trabalho de 20x20cm.</li>
@@ -144,7 +144,7 @@
                   <li class="font_second font14">Cortadora a laser Duplo Tech DJ-4040, com área de trabalho 40x40cm, 40W, corta materiais até 4mm de espessura.</li>
                   <li class="font_second font14">Cortadora de papel e vinil Silhouette Portrait (largura de corte 20,5cm).</li>
                   <br>
-              <p class="font_second font18"><strong>Infraestrutura</strong></p>
+              <p class="font_second font18"><strong>{{page.makerspaceInfraTitulo}}</strong></p>
                   <li class="font_second font14">4 mesas 1,50 x 0,60 m de altura regulável (0,8 ou 0,9 ou 1m).</li>
                   <li class="font_second font14">12 cadeiras cinzas empilháveis e 4 banquetas altas.</li>
                   <li class="font_second font14">Tomadas 110V e 220V.</li>
@@ -229,12 +229,12 @@
 			<a class="col-xs-4" data-toggle="modal" data-target="#marcenaria">
 				<img src="i/Marcenaria.jpg" class="top35 bottom35 width_full" alt="" />
                 <span class="font_first font50 top_text text_center uppercase white">
-						Marce-
+                    {{page.tituloMarcenaria1}}
 						<br />
-						naria
+                    {{page.tituloMarcenaria2}}
 				</span>
                 <span class="font_second font14 bottom_text text_center uppercase white">
-                        bancada de médio porte
+                        {{page.textoMarcenaria}}
 				</span>
 			</a>
 				<a class="col-xs-4" data-toggle="modal" data-target="#biohacking">
@@ -245,16 +245,16 @@
 						Hacking
 				</span>
                 <span class="font_second font14 bottom_text text_center uppercase white">
-                        Laboratório para bioprototipagem
+                        {{page.textoBiohacking}}
 				</span>
 			</a>
 				<a class="col-xs-4" data-toggle="modal" data-target="#salona">
 				<img src="i/Salona.jpg" class="top35 bottom35 width_full" alt="" />
                 <span class="font_first font50 top_text text_center uppercase white">
-						Salona
+						{{page.tituloSalona}}
 				</span>
                 <span class="font_second font14 bottom_text text_center uppercase white">
-                        Reuniões e treinamentos
+                        {{page.textoSalona}}
 				</span>
 			</a>
 		</div>
@@ -420,10 +420,37 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title font_first uppercase">Café Tecnológico</h4>
+            <h4 class="modal-title font_first font40 uppercase">Café Tecnológico</h4>
           </div>
           <div class="modal-body padding_left30 padding_right30">
-              teste 
+              <h2 class="font_second font18">Próximo</h2>
+              <img src="i/alvorada.jpg" alt="">
+              <div class="container">
+                <h2 class="font_second font18">Passados</h2>  
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="i/betakit.jpg" alt="">
+                  </div>
+
+                  <div class="item">
+                    <img src="i/lilothink.jpg" alt="">
+                  </div>
+
+                  <div class="item">
+                    <img src="i/maumaker.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div> 
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default font_second font14" data-dismiss="modal">Fechar</button>
