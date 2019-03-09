@@ -53,10 +53,12 @@
 		<div class="top65 flex justify_between inner">
             {% for blog in site.data.blog %}
             {% if blog.campo == "presente" %}
-			<a  data-toggle="modal" data-target="#{{blog.id}}" class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
+            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom30 padding_left10 padding_right10 block">
+			<a  data-toggle="modal" data-target="#{{blog.id}}">
 				<img src="{{blog.foto1}}" class="width200" alt="" />
 				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
 			</a>
+            </div>
             {% endif %}
             {% endfor %}
 		</div>
@@ -65,13 +67,15 @@
         <div class="top65 flex justify_between inner">
             {% for blog in site.data.blog %}
             {% if blog.campo == "passado" %}
-			<a  data-toggle="modal" data-target="#{{blog.id}}" class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
+            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom30 padding_left10 padding_right10 block">
+			<a  data-toggle="modal" data-target="#{{blog.id}}" >
 				<img src="{{blog.foto1}}" class="width200" alt="" />
 				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
 			</a>
+            </div>
             {% endif %}
             {% endfor %}
-		</div>
+		</div>    
         
         {% for blog in site.data.blog %}
         <div id="{{blog.id}}" class="modal in" role="dialog">
