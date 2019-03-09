@@ -50,102 +50,53 @@
 <section id="iniciativas" class="team_1 bg_white padding_top100 padding_bottom45">
 	<div class="container nopadding text-center dark_gray">
 		<h2 class="font40 font_first uppercase">Fique por dentro</h2>
-        
-<!--
-        <div class="row">
-            
-            <div class="col-xs-4">
-                {% for blog in site.data.blog %}
-                <a  data-toggle="modal" data-target="#mymodal" class="margin_auto bottom70 radius10 padding_left20 padding_right20">
-				<img src="{{blog.foto1}}" class="width400" alt="" />
-				<p class="top25 font_second font18 bold title">{{blog.tituloPT}}</p>
-			     </a>
-            </div>
-        </div>
-        {% endfor %}
--->
-<!--
-            <div class="col-xs-4">
-                <a  data-toggle="modal" data-target="#mymodal" class="margin_auto bottom70 radius10 padding_left20 padding_right20">
-				<img src="{{blog.foto1}}" class="width400" alt="" />
-				<p class="top25 font_second font18 bold title">{{blog.tituloPT}}</p>
-			</a>
-            </div>
--->
-<!--        </div>-->
-        
-    
 		<div class="top65 flex justify_between inner">
             {% for blog in site.data.blog %}
+            {% if blog.campo == "presente" %}
 			<a  data-toggle="modal" data-target="#{{blog.id}}" class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
 				<img src="{{blog.foto1}}" class="width200" alt="" />
 				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
 			</a>
+            {% endif %}
             {% endfor %}
-<!--
-			<div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/maumaker.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">Mau Maker</div>
-			</div>
-			<div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/betakit.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">betakit</div>
-			</div>
-            
-            <div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/mee.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">Mee</div>
-			</div>
--->
 		</div>
-        
-        <!-- Modal Fique por dentro-->
-    {% for blog in site.data.blog %}
-    <div id="{{blog.id}}" class="modal in" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title font_first font40 uppercase">{{blog.tituloPT}}</h4>
-          </div>
-          <div class="modal-body padding_left30 padding_right30">
-              <img src="{{blog.foto1}}" class="top35 bottom35 width_full" alt="" />
-                <p class="font_second font14 text_left"><strong>Palavras-chave:</strong> {{blog.keywordsPT}}</p>
-                <br>
-                <p class="font_second font18 text_left">{{blog.sinopsePT}}</p>
-                <br>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default font_second font14" data-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
         
         <h2 class="font40 font_first uppercase">Veja como foi</h2>
         <div class="top65 flex justify_between inner">
-            <div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/alvorada.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">Alvorada Filmes</div>
-			</div>
-            
-            <div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/biolilolab.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">BioLiloLab</div>
-			</div>
-            
-            <div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/biolilolab.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">zucchini.press</div>
-			</div>
-            
-            <div class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
-				<img src="i/biolilolab.jpg" alt="" />
-				<div class="top25 font_second font18 bold title">zucchini.video</div>
-			</div>
+            {% for blog in site.data.blog %}
+            {% if blog.campo == "passado" %}
+			<a  data-toggle="modal" data-target="#{{blog.id}}" class="margin_auto bottom70 radius10 padding_left20 padding_right20 block">
+				<img src="{{blog.foto1}}" class="width200" alt="" />
+				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
+			</a>
+            {% endif %}
+            {% endfor %}
 		</div>
+        
+        {% for blog in site.data.blog %}
+        <div id="{{blog.id}}" class="modal in" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title font_first font40 uppercase">{{blog.tituloPT}}</h4>
+              </div>
+              <div class="modal-body padding_left30 padding_right30">
+                  <img src="{{blog.foto1}}" class="top35 bottom35 width_full" alt="" />
+                    <p class="font_second font14 text_left"><strong>Palavras-chave:</strong> {{blog.keywordsPT}}</p>
+                    <br>
+                    <p class="font_second font18 text_left">{{blog.sinopsePT}}</p>
+                    <br>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default font_second font14" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
 	</div>
 </section>
 
