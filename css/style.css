@@ -2262,6 +2262,11 @@ b, strong {
   border: 1px solid #e7e7e7;
 }
 
+.blog .block {
+  border: 1px solid #e7e7e7;
+}
+
+
 .team_1 .block_socials {
   border-top: 1px solid #e7e7e7;
 }
