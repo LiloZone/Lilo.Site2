@@ -47,15 +47,15 @@
 
 <!-- Showcase 3 -->
 
-<section id="iniciativas" class="team_1 bg_white padding_top100 padding_bottom45">
+<section id="iniciativas" class="blog bg_white padding_top100 padding_bottom45">
 	<div class="container nopadding text-center dark_gray">
 		<h2 class="font40 font_first uppercase">Fique por dentro</h2>
 		<div class="top65 flex justify_between inner">
             {% for blog in site.data.blog %}
             {% if blog.campo == "presente" %}
-            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom30 padding_left10 padding_right10 block">
+            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom20 padding_left10 padding_right10 block">
 			<a  data-toggle="modal" data-target="#{{blog.id}}">
-				<img src="../{{blog.foto1}}" class="width200" alt="" />
+				<img src="{{blog.foto1}}" class="width200" alt="" />
 				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
 			</a>
             </div>
@@ -67,9 +67,9 @@
         <div class="top65 flex justify_between inner">
             {% for blog in site.data.blog %}
             {% if blog.campo == "passado" %}
-            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom30 padding_left10 padding_right10 block">
+            <div class="margin_auto bottom70 radius10 padding_top30 padding_bottom20 padding_left10 padding_right10 block">
 			<a  data-toggle="modal" data-target="#{{blog.id}}" >
-				<img src="../{{blog.foto1}}" class="width200" alt="" />
+				<img src="{{blog.foto1}}" class="width200" alt="" />
 				<p class="top25 font_second font18 bold width200">{{blog.tituloPT}}</p>
 			</a>
             </div>
@@ -89,9 +89,14 @@
               <div class="modal-body padding_left30 padding_right30">
                   <img src="{{blog.foto1}}" class="top35 bottom35 width_full" alt="" />
                     <p class="font_second font14 text_left"><strong>Palavras-chave:</strong> {{blog.keywordsPT}}</p>
+                    <p class="font_second font14 text_left"><strong>Keywords:</strong> {{blog.keywordsEN}}</p>
+                    <p class="font_second font18 text_left">---</p>
                     <br>
                     <p class="font_second font18 text_left">{{blog.sinopsePT}}</p>
                     <br>
+                    <p class="font_second font18 text_left">---</p>
+                    <br>
+                    <p class="font_second font18 text_left">{{blog.sinopseEN}}</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default font_second font14" data-dismiss="modal">Fechar</button>
