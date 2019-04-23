@@ -36,9 +36,9 @@ $(".open_menu").click(function(){
 	$(".navigation_mobile").addClass("opened");
 });
 
-// $(".close_menu, header, section, footer, .navigation_mobile .inner a").click(function(){
-// 	$(".navigation_mobile").removeClass("opened");
-// });
+$(".close_menu, header, section, footer, .navigation_mobile .inner a").click(function(){
+	$(".navigation_mobile").removeClass("opened");
+});
 
 // Enable AOS plugin (blocks animations)
 
